@@ -46,3 +46,5 @@
                        &trans &kp BSPC  &mo RSE             &kp RET &kp SPACE &trans
                         >;
                 };
+        };
+};
