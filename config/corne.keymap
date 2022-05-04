@@ -21,7 +21,7 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  F  |  P   |  B   |        |  J  |  L   |  U  |  Y  |  '  | NAV  |
-// | LALT |  A  |  R  |  S  |  F   |  G   |        |  M  |  N   |  E  |  I  |  O  |  ;   |
+// | LALT |  A  |  R  |  S  |  T   |  G   |        |  M  |  N   |  E  |  I  |  O  |  ;   |
 // | CTRL |  Z  |  X  |  C  |  D   |  V   |        |  K  |  H   |  ,  |  .  |  /  | LGUI |
 //                    | NAV | BSPC | SHFT |        | ENT | SPC  | NUM |
                         bindings = <
