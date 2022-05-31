@@ -11,7 +11,7 @@
 
 # define DEFAULT 0
 # define NUM 1
-# define RSE 2
+# define SYM 2
 # define NAV 3
 
 / {
@@ -20,59 +20,59 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q  |  W  |  F  |  P   |  B   |        |  J  |  L   |  U  |  Y  |  '  | NAV  |
-// | LALT |  A  |  R  |  S  |  T   |  G   |        |  M  |  N   |  E  |  I  |  O  |  ;   |
-// | CTRL |  Z  |  X  |  C  |  D   |  V   |        |  K  |  H   |  ,  |  .  |  /  | LGUI |
-//                    | NAV | BSPC | SHFT |        | ENT | SPC  | NUM |
+// | ALT  |    Q   |    W   |    F    |     P     |  B  |        |  J  |   L     |    U    |    Y   |    '   |  DEL  |
+// | SHFT | gui(A) | alt(R) | shft(S) |  ctrl(T)  |  G  |        |  M  | ctrl(N) | shft(E) | alt(I) | gui(O) |   ;   |
+// | CTRL |    Z   |    X   |    C    |     D     |  V  |        |  K  |    H    |    ,    |    .   |    /   |  ESC  |
+//                          |  (SYM)  | NAV(BSPC) | TAB |        | RET |   SPC   |  (NUM)  |
                         bindings = <
-   &kp TAB    &kp Q &kp W &kp F &kp P &kp B        &kp J   &kp L    &kp U     &kp Y   &kp SQT  &mo NAV
-   &kp LALT   &kp A &kp R &kp S &kp T &kp G        &kp M   &kp N    &kp E     &kp I   &kp O    &kp SEMI
-   &kp LCTRL  &kp Z &kp X &kp C &kp D &kp V        &kp K   &kp H    &kp COMMA &kp DOT &kp FSLH &kp LGUI
-                &mo NAV &kp BSPC  &kp LSHFT        &kp RET &kp SPACE &mo NUM
+   &kp LALT  &kp Q      &kp W      &kp F       &kp P        &kp B        &kp J   &kp L       &kp U       &kp Y      &kp SQT    &kp DEL
+   &kp LSHFT &mt LGUI A &mt LALT R &mt LSHFT S &mt LCTRL T  &kp G        &kp M   &mt LCTRL N &mt LSHFT E &mt LALT I &mt LGUI O &kp SEMI
+   &kp LCTRL &kp Z      &kp X      &kp C       &kp D        &kp V        &kp K   &kp H       &kp COMMA   &kp DOT    &kp FSLH   &kp ESC
+                                     &mo SYM &lt NAV BSPC &kp TAB        &kp RET &kp SPACE   &mo NUM
                         >;
                 };
 
-                num_layer {
+                number_layer {
 // -----------------------------------------------------------------------------------------
-//      | TAB  |  !  |  @  |  #  |   $  |  %   |      |  !  |   @  |   #  |   $   |  %  |   &  |
-//      | LALT |  1  |  2  |  3  |   4  |  5   |      |  <  |   (  |   [  |   {   |  `  |   -  |
-//      | CTRL |  6  |  7  |  8  |   9  |  0   |      |  ^  |   =  |   +  |   *   |  \  | LGUI |
-//                         |     | BSPC | RSE  |      | ENT | SPC  |      |
+// |   | / | 7 | 8 | 9 | * |        |   |   |   |   |   |   |
+// |   | . | 4 | 5 | 6 | + |        |   |   |   |   |   |   |
+// |   | 0 | 1 | 2 | 3 | - |        |   |   |   |   |   |   |
+//             |   |   |   |        |   |   |   |
                         bindings = <
-   &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp EXCL  &kp AT    &kp HASH &kp DLLR &kp PRCNT &kp AMPS
-   &kp LALT  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5       &kp LT    &kp LPAR  &kp LBKT &kp LBRC &kp GRAVE &kp MINUS
-   &kp LCTRL &kp N6   &kp N7 &kp N8   &kp N9   &kp N0       &kp CARET &kp EQUAL &kp PLUS &kp STAR &kp BSLH  &kp LGUI
-                       &trans &kp BSPC  &mo RSE             &kp RET &kp SPACE &trans
+   &trans &kp FSLH &kp 7 &kp 8 &kp 9 &kp  STAR       &trans &trans &trans &trans &trans &trans 
+   &trans &kp DOT  &kp 4 &kp 5 &kp 6 &kp  PLUS       &trans &trans &trans &trans &trans &trans 
+   &trans &kp 0    &kp 1 &kp 2 &kp 3 &kp MINUS       &trans &trans &trans &trans &trans &trans 
+                          &trans &trans &trans       &trans &trans &trans
                         >;
                 };
 
-                rse_layer {
+                symbol_layer {
 // -----------------------------------------------------------------------------------------
-//   | TAB  |  F11 |  F12 |      |      |        |       |     |      |      |     |     |      |
-//   | LALT |  F1  |  F2  |  F3  |  F4  |  F5    |       |  >  |  )   |  ]   |  }  |  ~  |  _   |
-//   | CTRL |  F6  |  F7  |  F8  |  F9  |  F10   |       |     |      |      |     |  |  | LGUI |
-//                        |      | BKSP |        |       | ENT | SPC  |      |
+// |   |   | ^ | * |   |   |        |   | ! | @ | # | & | $ |
+// |   | ~ | - | + | = |   |        |   | { | ( | [ | < | \ |
+// |   | ` | _ |   |   |   |        |   | } | ) | ] | > | | |
+//             |   |   |   |        |   |   |   |
                         bindings = <
-   &kp TAB   &kp F11 &kp F21 &trans &trans &trans        &trans &trans   &trans   &trans   &trans    &trans
-   &kp LALT  &kp F1  &kp F2  &kp F3 &kp F4 &kp F5        &kp GT &kp RPAR &kp RBKT &kp RBRC &kp TILDE &kp UNDER
-   &kp LCTRL &kp F6  &kp F7  &kp F8 &kp F9 &kp F10       &trans &trans   &trans   &trans   &kp PIPE  &kp LGUI
-                            &trans &kp BSPC &trans       &kp RET &kp SPACE &trans
+   &trans &trans    &kp CARET &kp STAR  &trans    &trans       &trans &KP EXCL &kp AT   &kp HASH &kp AMPS &kp DLLR 
+   &trans &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &trans       &trans &kp LBRC &kp LPAR &kp LBKT &kp LT   &kp BSLH 
+   &trans &kp 0     &kp GRAVE &kp UNDER &trans    &trans       &trans &kp RBRC &kp RPAR &kp RBKT &kp GT   &kp PIPE 
+                                    &trans &trans &trans       &trans &trans &trans
                         >;
                 };
 
-
-                nav_layer {
+                navigation_layer {
 // -----------------------------------------------------------------------------------------
-//   | TAB  |     |     |     |      |        |         |     | ESC  |  UP  |       | ALT+TAB |      |
-//   | LALT | BT0 | BT1 | BT2 |  BT3 |   BT4  |         |     | LEFT | DOWN | RIGHT |         |      |
-//   | CTRL |     |     | USB |  BLE | BT CLR |         |     |      |      |       |         | LGUI |
-//                      |     | BKSP |  SHIFT |         | ENT | SPC  |      |
+// |   |     |     |     |     |       |        |     |     |     |     |   |   |
+// |   | BT1 | BT2 | BT3 | BT4 |  BT5  |        | LFT | DWN |  UP | RGT |   |   |
+// |   |     |     | USB |  BT | BTCLR |        |     |     |     |     |   |   |
+//                 |     |     |       |        |     |     |     |
                         bindings = <
-   &kp TAB   &trans    &trans    &trans    &trans       &trans                         &trans  &kp ESC &kp UP    &trans    &kp LA(TAB)  &trans
-   &kp LALT  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &trans  &kp LEFT &kp DOWN &kp RIGHT &trans       &trans
-   &kp LCTRL &trans       &trans       &out OUT_USB &out OUT_BLE &bt BT_CLR            &trans  &trans   &trans   &trans    &trans       &kp LGUI
-                                                   &trans &kp BSPC  &kp LSHFT          &kp RET &kp SPACE &trans
+   &trans &trans       &trans       &trans       &trans       &trans             &trans   &trans   &trans &trans    &trans &trans
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans 
+   &trans &trans       &trans       &out OUT_USB &out OUT_BLE &bt BT_CLR         &trans   &trans   &trans &trans    &trans &trans 
+                                    &trans       &trans       &trans             &trans   &trans   &trans
                         >;
                 };
+
         };
 };
