@@ -53,7 +53,7 @@
 // |   | ` | _ |   |   |   |        |   | } | ) | ] | > | | |
 //             |   |   |   |        |   |   |   |
                         bindings = <
-   &trans &trans    &kp CARET &kp STAR  &trans    &trans       &trans &KP EXCL &kp AT   &kp HASH &kp AMPS &kp DLLR 
+   &trans &trans    &kp CARET &kp STAR  &trans    &trans       &trans &kp EXCL &kp AT   &kp HASH &kp AMPS &kp DLLR 
    &trans &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &trans       &trans &kp LBRC &kp LPAR &kp LBKT &kp LT   &kp BSLH 
    &trans &kp 0     &kp GRAVE &kp UNDER &trans    &trans       &trans &kp RBRC &kp RPAR &kp RBKT &kp GT   &kp PIPE 
                                     &trans &trans &trans       &trans &trans &trans
