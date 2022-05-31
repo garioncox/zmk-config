@@ -15,6 +15,17 @@
 # define NAV 3
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -26,7 +37,7 @@
 //                          |  (SYM)  | NAV(BSPC) | TAB |        | RET |   SPC   |  (NUM)  |
                         bindings = <
    &kp LALT  &kp Q      &kp W      &kp F       &kp P        &kp B        &kp J   &kp L       &kp U       &kp Y      &kp SQT    &kp DEL
-   &kp LSHFT &mt LGUI A &mt LALT R &mt LSHFT S &mt LCTRL T  &kp G        &kp M   &mt LCTRL N &mt LSHFT E &mt LALT I &mt LGUI O &kp SEMI
+   &kp LSHFT &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T  &kp G        &kp M   &hm LCTRL N &hm LSHFT E &hm LALT I &hm LGUI O &kp SEMI
    &kp LCTRL &kp Z      &kp X      &kp C       &kp D        &kp V        &kp K   &kp H       &kp COMMA   &kp DOT    &kp FSLH   &kp ESC
                                      &mo SYM &lt NAV BSPC &kp TAB        &kp RET &kp SPACE   &mo NUM
                         >;
