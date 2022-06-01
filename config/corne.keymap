@@ -20,8 +20,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            tapping-term-ms = <125>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -32,12 +32,12 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | ALT  |    Q   |    W   |    F    |     P     |  B  |        |  J  |   L     |    U    |    Y   |    '   |  DEL  |
-// | SHFT | gui(A) | alt(R) | shft(S) |  ctrl(T)  |  G  |        |  M  | ctrl(N) | shft(E) | alt(I) | gui(O) |   ;   |
+// | SHFT | gui(A) | alt(R) | ctrl(S) |  shft(T)  |  G  |        |  M  | shft(N) | ctrl(E) | alt(I) | gui(O) |   ;   |
 // | CTRL |    Z   |    X   |    C    |     D     |  V  |        |  K  |    H    |    ,    |    .   |    /   |  ESC  |
 //                          |  (SYM)  | NAV(BSPC) | TAB |        | RET |   SPC   |  (NUM)  |
                         bindings = <
    &kp LALT  &kp Q      &kp W      &kp F       &kp P        &kp B        &kp J   &kp L       &kp U       &kp Y      &kp SQT    &kp DEL
-   &kp LSHFT &hm LGUI A &hm LALT R &hm LSHFT S &hm LCTRL T  &kp G        &kp M   &hm LCTRL N &hm LSHFT E &hm LALT I &hm LGUI O &kp SEMI
+   &kp LSHFT &hm LGUI A &hm LALT R &hm LCTRL S &hm LSHFT T  &kp G        &kp M   &hm LSHFT N &hm LCTRL E &hm LALT I &hm LGUI O &kp SEMI
    &kp LCTRL &kp Z      &kp X      &kp C       &kp D        &kp V        &kp K   &kp H       &kp COMMA   &kp DOT    &kp FSLH   &kp ESC
                                      &mo SYM &lt NAV BSPC &kp TAB        &kp RET &kp SPACE   &mo NUM
                         >;
