@@ -31,15 +31,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | ALT  |  Q  |  W  |  F  |  P  |  B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
-// | SHFT |  A  |  R  |  S  |  T  |  G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
-// | CTRL |  Z  |  X  |  C  |  D  |  V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
-//            | (SYM) | NAV(BSPC) | TAB |        | RET |    SPC    | (NUM) |
+// | TAB  |  Q  |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
+// | ALT  |  A  |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
+// | CTRL |  Z  |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
+//            | (SYM) | NAV(BSPC) | SHFT |        | RET |    SPC    | (NUM) |
                         bindings = <
-   &kp LALT  &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
-   &kp LSHFT &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
+   &kp TAB  &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
+   &kp LALT &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp ESC
-                &mo SYM &lt NAV BSPC &kp TAB      &kp RET &kp SPACE &mo NUM
+                &mo SYM &lt NAV BSPC &kp LSHFT      &kp RET &kp SPACE &mo NUM
                         >;
                 };
 
