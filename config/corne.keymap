@@ -27,7 +27,6 @@
         };
     };
 
-/ {
     combos {
         compatible = "zmk,combos";
         combo_bt {
@@ -35,7 +34,7 @@
             bindings = <&mo BTL>;
         };
     };
-};
+    
         keymap {
                 compatible = "zmk,keymap";
 
