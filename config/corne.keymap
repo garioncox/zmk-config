@@ -11,8 +11,8 @@
 
 # define DEFAULT 0
 # define NUM 1
-# define SYM 2
-# define NAV 3
+# define NAV 2
+# define BTL 3
 
 / {
     behaviors {
@@ -26,6 +26,16 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_bt {
+            timeout-ms = <50>;
+            bindings = <&mo BTL>;
+        };
+    };
+};
         keymap {
                 compatible = "zmk,keymap";
 
@@ -34,56 +44,56 @@
 // | TAB  |  Q  |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
 // | ALT  |  A  |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
 // | CTRL |  Z  |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
-//            | (NAV) | NUM(BSPC) | SHFT |        | RET |    SYM(SPC)    | (NAV) |
+//            | (NAV) | NUM(BSPC) | SHFT |        | RET |    NUM(SPC)    | (NAV) |
                         bindings = <
    &kp TAB  &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
    &kp LALT &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V       &kp K &kp H &kp COMMA &kp DOT &kp FSLH &hm LGUI ESC
-            &mo NAV &lt NUM BSPC &kp LSHFT       &kp RET &lt SYM SPACE &mo NAV
+            &mo NAV &lt NUM BSPC &kp LSHFT       &kp RET &lt NUM SPACE &mo NAV
                         >;
                 };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
-// |   | / | 7 | 8 | 9 | * |        |   |   |   |   |   |   |
-// |   | . | 4 | 5 | 6 | + |        |   |   |   |   |   |   |
-// |   | 0 | 1 | 2 | 3 | - |        |   |   |   |   |   |   |
+// | x | 1 | 2 | 3 | 4 | 5 |        | 6 | 7 | 8 | 9 | 0 | ` |
+// | x | < | [ | ( | { | @ |        | _ | } | ) | ] | > | ~ |
+// | x | & |   | ^ | ! | + |        | - | = | * | # | \ | x |
 //             |   |   |   |        |   |   |   |
                         bindings = <
-   &trans &kp FSLH &kp N7 &kp N8 &kp N9 &kp STAR        &none &none &none &none &none &none 
-   &trans &kp DOT  &kp N4 &kp N5 &kp N6 &kp PLUS        &none &none &none &none &none &none  
-   &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp MINUS       &none &none &none &none &none &none 
-                             &trans &trans &trans       &trans &trans &trans
-                        >;
-                };
-
-                symbol_layer {
-// -----------------------------------------------------------------------------------------
-// |   |   | ^ | * |   |   |        |   | ! | @ | # | & | $ |
-// |   | ~ | - | + | = |   |        |   | { | ( | [ | < | \ |
-// |   | ` | _ |   |   |   |        |   | } | ) | ] | > | | |
-//             |   |   |   |        |   |   |   |
-                        bindings = <
-   &trans &none     &kp CARET &kp STAR  &none     &none       &none &kp EXCL &kp AT   &kp HASH &kp AMPS &kp DLLR 
-   &trans &kp TILDE &kp MINUS &kp PLUS  &kp EQUAL &none       &none &kp LBRC &kp LPAR &kp LBKT &kp LT   &kp BSLH 
-   &trans &kp GRAVE &kp UNDER &none     &none     &none       &none &kp RBRC &kp RPAR &kp RBKT &kp GT   &kp PIPE 
-                                    &trans &trans &trans       &trans &trans &trans
+   &trans  &kp N1   &kp N2   &kp N3    &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9    &kp N0   &kp GRAVE
+   &trans  &kp LT   &kp LBKT &kp LPAR  &kp LBRC &kp AT         &kp UNDER &kp RBRC  &kp RPAR &kp RBKT  &kp LT   &kp TILDE  
+   &trans  &kp AMPS &none    &kp CARET &kp EXCL &kp PLUS       &kp MINUS &kp EQUAL &kp STAR &kp POUND &kp BSLH &trans  
+                             &trans    &trans   &trans         &trans    &trans    &trans
                         >;
                 };
 
                 navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |   |     |     |     |     |       |        |     |     |     |     |   |        |
-// |   | BT1 | BT2 | BT3 | BT4 |  BT5  |        | LFT | DWN |  UP | RGT |   |        |
-// |   |     |     | USB |  BT | BTCLR |        |     |     |     |     |   | ALT+F4 |
-//                 |     |     |       |        |     |     |     |
+// |   |     |     |     |     |     |        |     |     |     |     |   |        |
+// |   |     |     |     |     |     |        | LFT | DWN |  UP | RGT |   |        |
+// |   |     |     |     |     |     |        |     |     |     |     |   | ALT+F4 |
+//                 |     |     |     |        |     |     |     |
                         bindings = <
-   &trans &none        &none        &none        &none        &none              &none    &none    &none  &none     &none &none
-   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
-   &trans &none        &none        &out OUT_USB &out OUT_BLE &bt BT_CLR         &none    &none    &none  &none     &none &none 
-                                    &trans       &trans       &trans             &trans   &trans   &kp LA(F4)
+   &trans &none &none &none &none &none         &none    &none    &none  &none     &none &none
+   &trans &none &none &none &none &none         &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none 
+   &trans &none &none &none &none &none         &none    &none    &none  &none     &none &kp LA(F4)
+                   &trans &trans &trans         &trans   &trans   &trans
                         >;
                 };
 
         };
+
+                bt_layer {
+// -----------------------------------------------------------------------------------------
+// |   |     |     |     |     |       |        |     |     |     |     |     |     |
+// |   | BT1 | BT2 | BT3 | BT4 |  BT5  |        |     |     |     |     |     |     |
+// |   |     |     | USB |  BT | BTCLR |        |     |     |     |     |     |     |
+//                 |     |     |       |        |     |     |     |
+                        bindings = <
+   &trans &none        &none        &none        &none        &none              &none &none &none &none &none &none
+   &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &none &none &none &none &none &none 
+   &trans &none        &none        &out OUT_USB &out OUT_BLE &bt BT_CLR         &none &none &none &none &none &none 
+                                    &trans       &trans       &trans             &trans   &trans   &trans
+                        >;
+                };
 };
