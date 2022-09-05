@@ -69,15 +69,15 @@
 
                 navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |   |     |     |     |     |     |        |     |     |     |     |     |        |
-// |   |     |     |     |     |     |        |     | LFT | DWN |  UP | RGT |        |
+// |   |     |     |     |     |     |        |     |     |  UP |     |     |        |
+// |   |     |     |     |     |     |        |     | LFT | DWN | RGT | RGT |        |
 // |   |     |     |     |     |     |        |     |     |     |     |     | ALT+F4 |
 //                 |     |     |     |        |     |     |     |
                         bindings = <
-   &trans &none &none &none &none &none         &none    &none    &none  &none     &none &none
-   &trans &none &none &none &none &none         &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
-   &trans &none &none &none &none &none         &none    &none    &none  &none     &none &kp LA(F4)
-                   &trans &trans &trans         &trans   &trans   &trans
+   &trans &none &none &none &none &none         &none  &none    &kp UP   &none     &none &none
+   &trans &none &none &none &none &none         &none  &kp LEFT &kp DOWN &kp RIGHT &none &none
+   &trans &none &none &none &none &none         &none  &none    &none    &none     &none &kp LA(F4)
+                   &trans &trans &trans         &trans &trans   &trans
                         >;
                 };
                 bt_layer {
