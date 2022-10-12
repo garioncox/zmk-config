@@ -31,10 +31,10 @@
         compatible = "zmk,combos";
         combo_bt {
             timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&mo BTL>;
+            key-positions = <37 40>;
+            bindings = <&kp TILDE>;
         };
-    };
+    }; 
     
         keymap {
                 compatible = "zmk,keymap";
