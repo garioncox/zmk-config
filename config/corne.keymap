@@ -31,8 +31,8 @@
     //     compatible = "zmk,combos";
     //     combo_bt {
     //         timeout-ms = <50>;
-    //         key-positions = <37 40>;
-    //         bindings = <&to BTL>;
+    //         key-positions = <38 39>;
+    //         bindings = <&kp BSPC>;
     //     };
     // }; 
     
@@ -44,24 +44,24 @@
 // | TAB  |  Q  |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
 // | ALT  |  A  |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
 // | CTRL |  Z  |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
-//            | (NAV) |   (NUM)   | SHFT |        | RET |    SPC    |    BSPC   |
+//            | (NAV) |   (NUM)   | SHFT |        | SPC |    RET    |    BSPC   |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &hm LGUI ESC
-                 &mo NAV &mo NUM &kp LSHFT        &kp RET &kp SPACE &kp BSPC
+                 &mo NAV &mo NUM &kp LSHFT        &kp SPACE &kp RET &kp BSPC
                         >;
                 };
 
                 number_layer {
 // -----------------------------------------------------------------------------------------
 // | x | 1 | 2 | 3 | 4 | 5 |        | 6 | 7 | 8 | 9 | 0 | ` |
-// | x | < | [ | ( | { | @ |        | $ | } | ) | ] | > | ~ |
+// | x | < | [ | { | ( | @ |        | $ | ) | } | ] | > | ~ |
 // | x | & | % | ^ | ! | + |        | - | = | * | # | \ | x |
 //             |   |   |   |        |   |   |   |
                         bindings = <
    &trans  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5         &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &kp GRAVE
-   &trans  &kp LT   &kp LBKT  &kp LPAR  &kp LBRC   &kp AT         &kp DOLLAR &kp RBRC  &kp RPAR &kp RBKT  &kp GT   &kp TILDE  
+   &trans  &kp LT   &kp LBKT  &kp LBRC  &kp LPAR   &kp AT         &kp DOLLAR &kp RPAR  &kp RBRC &kp RBKT  &kp GT   &kp TILDE  
    &trans  &kp AMPS &kp PRCNT &kp CARET &kp EXCL &kp PLUS         &kp MINUS  &kp EQUAL &kp STAR &kp POUND &kp BSLH &trans  
                                 &trans    &trans   &trans         &trans     &trans    &trans
                         >;
@@ -69,13 +69,13 @@
                 navigation_layer {
 // -----------------------------------------------------------------------------------------
 // |   |     |     |     |     |       |        |     |     |  UP |     |     |        |
-// |   | BT1 | BT2 | BT3 | BT4 |  BT5  |        |     | LFT | DWN | RGT |     |        |
+// |   | BT1 | BT2 | BT3 | BT4 |  BT5  |        |     | LFT | DWN | RGT | END |        |
 // |   |     |     | USB |  BT | BTCLR |        |     |     |     |     |     | ALT+F4 |
 //                 |     |     |       |        |     |     |     |
                         bindings = <
-    &trans &none        &none        &none        &none               &none         &none  &none    &kp UP   &none     &none &none
-    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none  &kp LEFT &kp DOWN &kp RIGHT &none &none
-    &trans &none        &none        &out OUT_USB &out OUT_BLE   &bt BT_CLR         &none  &none    &none    &none     &none &kp LA(F4)
+    &trans &none        &none        &none        &none               &none         &none  &none    &kp UP   &none     &none   &none
+    &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4         &none  &kp LEFT &kp DOWN &kp RIGHT &kp END &none
+    &trans &none        &none        &out OUT_USB &out OUT_BLE   &bt BT_CLR         &none  &none    &none    &none     &none   &kp LA(F4)
                                                        &trans &trans &trans         &trans &trans   &trans
                         >;
                 };
