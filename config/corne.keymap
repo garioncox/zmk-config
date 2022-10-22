@@ -44,12 +44,12 @@
 // | TAB  |  Q  |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
 // | ALT  |  A  |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
 // | CTRL |  Z  |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
-//            | (NAV) |   (NUM)   | SHFT |        | SPC |    RET    |    BSPC   |
+//            | (NAV) |   BSPC    | SHFT |        | RET |    SPC    |    (NUM)   |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &hm LGUI ESC
-                 &mo NAV &mo NUM &kp LSHFT        &kp SPACE &kp RET &kp BSPC
+           &mo SYM &kp BSPC &kp LEFT_SHIFT        &kp RET &kp SPACE &mo NUM
                         >;
                 };
 
@@ -57,12 +57,12 @@
 // -----------------------------------------------------------------------------------------
 // | x | 1 | 2 | 3 | 4 | 5 |        | 6 | 7 | 8 | 9 | 0 | ` |
 // | x | < | [ | { | ( | @ |        | $ | ) | } | ] | > | ~ |
-// | x | & | % | ^ | ! | + |        | - | = | * | # | \ | x |
+// | x | % | & | ^ | ! | + |        | = | - | * | # | \ | x |
 //             |   |   |   |        |   |   |   |
                         bindings = <
    &trans  &kp N1   &kp N2    &kp N3    &kp N4     &kp N5         &kp N6     &kp N7    &kp N8   &kp N9    &kp N0   &kp GRAVE
    &trans  &kp LT   &kp LBKT  &kp LBRC  &kp LPAR   &kp AT         &kp DOLLAR &kp RPAR  &kp RBRC &kp RBKT  &kp GT   &kp TILDE  
-   &trans  &kp AMPS &kp PRCNT &kp CARET &kp EXCL &kp PLUS         &kp MINUS  &kp EQUAL &kp STAR &kp POUND &kp BSLH &trans  
+   &trans  &kp PRCNT &kp AMPS &kp CARET &kp EXCL &kp PLUS         &kp EQUAL  &kp MINUS &kp STAR &kp POUND &kp BSLH &trans  
                                 &trans    &trans   &trans         &trans     &trans    &trans
                         >;
                 };
