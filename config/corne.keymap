@@ -44,12 +44,12 @@
 // | TAB  |  Q  |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  |    DEL   |
 // | ALT  |  A  |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |     ;    |
 // | CTRL |  Z  |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC) |
-//            | (NAV) |   BSPC    | SHFT |        | RET |    SPC    |    (NUM)   |
+//            | (NAV) |   BSPC    | SHFT |        | RET |    SPC    |   (NUM)   |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp DEL
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &hm LGUI ESC
-           &mo SYM &kp BSPC &kp LEFT_SHIFT        &kp RET &kp SPACE &mo NUM
+                &mo SYM &kp BSPC &kp LSHFT        &kp RET &kp SPACE &mo NUM
                         >;
                 };
 
