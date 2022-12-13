@@ -37,7 +37,7 @@
 // | CTRL |  Z   |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui(ESC)  |
 //        | Home |   (NAV) BSPC    | SHFT |        | RET |    (NUM) SPC    | End |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp lt NAV DEL
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &lt NAV DEL
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &hm LGUI ESC
            &kp HOME &lt NAV BSPC &kp LSHFT        &kp RET &lt NUM SPACE &kp END
