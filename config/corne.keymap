@@ -40,7 +40,7 @@
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp ESC
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp LGUI
-           &kp HOME &lt NAV BSPC &kp LSHFT        &kp RET &lt NUM SPACE &kp END
+       &lt NAV HOME &lt NUM BSPC &kp LSHFT        &kp RET &lt NUM SPACE &lt NAV END
                         >;
                 };
 
@@ -59,14 +59,14 @@
                 };
                 navigation_layer {
 // -----------------------------------------------------------------------------------------
-// |   | BT1 | BT2 | BT3 |     |       |        |     |     |  UP |     |     |        |
-// |   |     |     |     |     |       |        |     | LFT | DWN | RGT |     |        |
-// |   |     |     | USB |  BT | BTCLR |        |     |     |     |     |     | ALT+F4 |
-//                 |     |     |       |        |     |     |     |
+// |   | BT1 | BT2 | BT3 |     |       |        |     |      |  UP |     |     |        |
+// |   | F1  | F2  | F3  | F11 |  F12  |        |     | LFT  | DWN | RGT |     |        |
+// |   |     |     | USB |  BT | BTCLR |        |     | HOME |     | END |     | ALT+F4 |
+//                 |     |     |       |        |     |      |     |
                         bindings = <
     &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans         &trans             &none  &none    &kp UP   &none     &none   &none
-    &trans &none        &none        &none        &none          &none              &none  &kp LEFT &kp DOWN &kp RIGHT &none   &none
-    &trans &none        &none        &out OUT_USB &out OUT_BLE   &bt BT_CLR         &none  &none    &none    &none     &none   &kp LA(F4)
+    &trans &kp F1       &kp F2       &kp F3        &kp F11       &kp F12            &none  &kp LEFT &kp DOWN &kp RIGHT &none   &none
+    &trans &none        &none        &out OUT_USB &out OUT_BLE   &bt BT_CLR         &none  &kp HOME &none    &kp END   &none   &kp LA(F4)
                                                        &trans &trans &trans         &trans &trans   &trans
                         >;
                 };
