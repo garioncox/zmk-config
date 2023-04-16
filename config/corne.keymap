@@ -32,15 +32,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | TAB  |  Q   |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |  '  | esc |
-// | ALT  |  A   |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |  O  |  ;  |
-// | CTRL |  Z   |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |  /  | gui |
-//        | Home |   (NAV) BSPC    | SHFT |        | RET |    (NUM) SPC    | End |
+// | TAB  |  Q   |  W  |  F  |  P  |   B  |        |  J  |  L  |  U  |  Y  |   '   | esc |
+// | ALT  |  A   |  R  |  S  |  T  |   G  |        |  M  |  N  |  E  |  I  |   O   |  ;  |
+// | CTRL |  Z   |  X  |  C  |  D  |   V  |        |  K  |  H  |  ,  |  .  |   /   | gui |
+//        | LEFT |   (NAV) BSPC    | SHFT |        | RET |    (NUM) SPC    | RIGHT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B        &kp J &kp L &kp U     &kp Y   &kp SQT  &kp ESC
    &kp LALT  &kp A &kp R &kp S &kp T &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp SEMI
    &kp LCTRL &kp Z &kp X &kp C &kp D &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp LGUI
-       &lt NAV HOME &lt NUM BSPC &kp LSHFT        &kp RET &lt NUM SPACE &lt NAV END
+       &lt NAV LEFT &lt NUM BSPC &kp LSHFT        &kp RET &lt NUM SPACE &lt NAV RIGHT
                         >;
                 };
 
